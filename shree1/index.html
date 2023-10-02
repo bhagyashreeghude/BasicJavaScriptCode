@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link referrerpolicy="=stylesheet" href="style.css">
+    <style>
+        #box{
+            height: 100px;
+            width: 100px;
+            background-color: blueviolet;
+        }
+        body{
+            
+            background-color: cornsilk;    
+        }
+        #myDiv{
+            padding: 50px;
+            background-color: darkblue;
+        }
+    </style>
+</head>
+<body>
+    <h2>Js Tutorial</h2>
+    
+     <!--afterend
+     <button id="btn" onclick="btnClick()">send</button>
+    <div id="box" onclick='fun()'></div>
+    <div id="box" oncontextmenu='fun1()'></div>
+    <div id="box" ondblclick='fun2()'></div>
+    <div id="box" onmousedown='fun3()'></div>
+    <div id="box" onmouseup='fun4()'></div>
+
+    <form action ="">
+        <input type="text" id="myInput">
+    </form>
+    <div id="myDiv">
+        <button id="btn">click me</button>
+    </div>
+
+    <a href="https://www.google.com" id="anchor" >click me</a>
+
+    <button id="btn1">Google</button>
+    <button id="btn2">Yahoo</button>
+    <button id="btn3">close</button>-->
+    <button id="btn" onclick="fun()">click</button>
+    <button id="btn" onclick="fun()">redirect to google</button>
+    <script>
+        /*//1.DOM event using normal funtion
+        function btnClick(){
+            alert("button was clicked");
+        }
+
+        //2. addEventListener
+        let btn=document.getElementById("btn");
+        btn.addEventListener("click",btnClick);
+        
+        //3. using anonyms function
+        btn.addEventListener ("click",function(){
+            alert("button was clicked");
+        });
+
+        //4. mouse over using anonyms funtion
+        btn.addEventListener("mouseover",function(){
+            console.log("mouse over was clicked");
+        });
+
+        //5. mouse out was clicked
+        btn.addEventListener("mouseout",function(){
+            console.log("mouse out was clicked");
+        });
+
+        //6.apply >1 EventListener
+        function click1(){
+            console.log('click 1 was activated')
+        }
+        function click2(){
+            console.log("click 2 was activated ")
+        }
+        btn.addEventListener('click',click1);
+        btn.addEventListener('click',click2);
+
+        //7.remove EventListener
+        btn.removeEventListener("click",click1);
+
+        //8.mouse click events
+        function fun(){
+            alert("event clicked");
+        }
+
+        //8.1 on context menu
+        function fun1(){
+            alert("right clicked");
+        }
+
+        //8.2 on double click
+        function fun2(){
+            alert("double clicked");
+        }
+        //8.3 on mouse down click
+        function fun3(){
+            alert("mouse down clicked");
+        }
+        //8.3 on mouse up click
+        function fun4(){
+            alert("mouse up clicked");
+        }
+
+        /* Scroll Events
+        9.1 scroll
+            window.addEventListener("scroll",function(){
+                console.log("scrolling...");
+        }); 
+
+        //9.2 scroll up and scroll down(wheel)
+        window.addEventListener("wheel",function(event){
+            if (event.deltaY < 0 ){
+                console.log("scroll up....");
+            }
+            else if(event.deltaY > 0){
+                console.log("scroll down....");
+            }
+        });
+
+        //9.3 pageYoffset
+        window.addEventListener("scroll",function(){
+            if (window.pageYOffset > 50){
+                document.body.style.backgroundColor='red';
+            }
+        });
+
+        //10.Input Event
+        let x = document.getElementById("myInput");
+        //10.1 inout
+        x.addEventListener('input' ,function(){
+            console.log(this.value);
+        });
+
+        //10.2 change
+        x.addEventListener("change",function(){
+            console.log(this.value);
+        });
+        //10.3 focus and blur
+        x.addEventListener("focus",myFocusFunction);
+        x.addEventListener("blur",myBlurFunction);
+        function myFocusFunction(){
+            x.style.background="blue";
+        }
+        function myBlurFunction(){
+            x.style.background="white";
+        }
+
+        //Event Bubbling and event capturing
+        let d=document.getElementById("myDiv");
+        let b=document.getElementById("btn");
+        b.addEventListener("click",btnClicked,true);
+        d.addEventListener("click",divClicked,true);
+        document.body.addEventListener("click",bodyClicked,true);
+
+        function btnClicked(){
+            console.log("button clicked");
+        }
+        function divClicked(){
+            console.log("div clicked");
+        }
+        function bodyClicked(){
+            console.log("body clicked");
+        }
+        let link=document.getElementById("anchor");
+        link.addEventListener("click",function(e){
+            console.log("link copied...");
+            e.preventDefault();
+        });
+    
+        console.log(window.innerHeight);
+        console.log(window.innerWidth);
+
+        console.log(window.outerHeight);
+        console.log(window.outerWidth);
+
+        let btn1=document.getElementById("btn1");
+        let btn2=document.getElementById("btn2");
+        let btn3=document.getElementById("btn3");
+        let win;
+        let url="https://www.google.com";
+        let features="height=500,width=500";
+
+        btn1.addEventListener("click",myFunc);
+        function myFunc(){
+            win = window.open(url,'google',features);
+        }
+
+        //change in existing window
+       
+        btn2.addEventListener("click",myFunc2);
+        function myFunc2(){
+            window.open("https://www.yahoo.com",'google',features);
+        }
+
+        //close window
+        btn3.addEventListener('click',myCloseFun);
+        function myCloseFun(){
+            win.close();
+        }
+
+        */
+        /*//using window.location
+        function fun(){
+            window.location="https://www.google.com";
+        }
+
+        //using location.href
+        function fun(){
+            location.href="https://www.google.com";
+        }  
+
+        //using location.assign
+        function fun(){
+            location.assign("https://www.google.com");
+        }*/
+
+        //using location.replace
+        function fun(){
+            location.replace="https://www.google.com";
+        }
+
+        /*//using location.reload
+        function fun(){
+            location.reload();
+        }*/
+
+
+        //Navigator object
+        console.log(navigator.appName);
+        console.log(navigator.appVersion);
+        console.log(navigator.cookieEnabled);
+        console.log(navigator.userAgent);
+        console.log(navigator.javaEnabled);
+
+        //Screen object
+        console.log(screen.width);
+        console.log(screen.height);
+        console.log(screen.colorDepth);
+        console.log(screen.orientation);
+    </script>
+</body>
+
+</html>
